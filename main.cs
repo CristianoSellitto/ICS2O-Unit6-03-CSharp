@@ -21,7 +21,7 @@ class Program
         var json = System.Text.Json.JsonSerializer.Deserialize<Object>(response);
         JsonNode jsonData = JsonNode.Parse(response)!;
         JsonNode temp = jsonData["main"]["temp"];
-        var temperature = (double) temp; 
+        var temperature = (double)temp;
         string celsiusTemp = (temperature - 273.15).ToString("0");
 
         Console.WriteLine("The current weather is " + celsiusTemp + "°C");
